@@ -1,0 +1,14 @@
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\bin\Debug\net8.0\lab1C#.exe
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\bin\Debug\net8.0\lab1C#.deps.json
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\bin\Debug\net8.0\lab1C#.runtimeconfig.json
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\bin\Debug\net8.0\lab1C#.dll
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\bin\Debug\net8.0\lab1C#.pdb
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.AssemblyInfoInputs.cache
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.AssemblyInfo.cs
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.csproj.CoreCompileInputs.cache
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.dll
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\refint\lab1C#.dll
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.pdb
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\lab1C#.genruntimeconfig.cache
+C:\Users\Арсен\source\repos\lab1C#\lab1C#\obj\Debug\net8.0\ref\lab1C#.dll
