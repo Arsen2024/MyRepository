@@ -10,16 +10,18 @@ function sumFirst50() {
 }
 
 // Завдання 2: Обчислити факторіал числа
-function factorial(n) {
+function factorial() {
+    let n = parseInt(prompt("Введіть число для обчислення факторіалу:"));
     let result = 1;
     for (let i = 2; i <= n; i++) {
         result *= i;
     }
-    console.log("Завдання 2:", result);
+    console.log("Завдання 2: Факторіал числа", n, "є:", result);
 }
 
 // Завдання 3: Визначити місяць за числом
-function getMonth(num) {
+function getMonth() {
+    let num = parseInt(prompt("Введіть число місяця (від 1 до 12):"));
     let month;
     switch (num) {
         case 1: month = "Січень"; break;
@@ -34,7 +36,7 @@ function getMonth(num) {
         case 10: month = "Жовтень"; break;
         case 11: month = "Листопад"; break;
         case 12: month = "Грудень"; break;
-        default: month = "Некоректне число";
+        default: month = "Некоректне число"; break;
     }
     console.log("Завдання 3:", month);
 }
@@ -59,8 +61,8 @@ function power(base, exponent) {
 
 // Виклик функцій для тесту
 sumFirst50();
-factorial(5); // Можна замінити на prompt() для вводу користувача
-getMonth(3); // Можна замінити на prompt()
+factorial();
+getMonth();
 sumEvenNumbers([1, 2, 3, 4, 5, 6]);
 countVowels("Привіт, як справи?");
 power(2, 3);
