@@ -1,0 +1,16 @@
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab_4._1.Form1.resources
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.csproj.GenerateResource.cache
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.AssemblyInfoInputs.cache
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.AssemblyInfo.cs
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.csproj.CoreCompileInputs.cache
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\bin\Debug\net8.0-windows\lab 4.1.exe
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\bin\Debug\net8.0-windows\lab 4.1.deps.json
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\bin\Debug\net8.0-windows\lab 4.1.runtimeconfig.json
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\bin\Debug\net8.0-windows\lab 4.1.dll
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\bin\Debug\net8.0-windows\lab 4.1.pdb
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.dll
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\refint\lab 4.1.dll
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.pdb
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\lab 4.1.genruntimeconfig.cache
+C:\Users\Арсен\source\repos\lab 4.1\lab 4.1\obj\Debug\net8.0-windows\ref\lab 4.1.dll
