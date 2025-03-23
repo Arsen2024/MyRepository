@@ -1,0 +1,7 @@
+2-символьні слова: AI AI AI AI AI (5)
+4-символьні слова: data data data data data (5)
+5-символьні слова: hello words world world words words hello words words world world hello world hello world hello words world hello world hello world hello words hello (25)
+6-символьні слова: Python Python Python Python random Python Python random Python Python random Python random Python Python (15)
+7-символьні слова: science science science science science science science science science science science (11)
+8-символьні слова: computer computer computer computer computer computer computer computer computer (9)
+11-символьні слова: programming programming programming programming programming (5)
