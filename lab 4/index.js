@@ -148,30 +148,30 @@ function libraryManagement() {
     // Початковий масив книг
     console.log("1. Початкові книги:", books);
 
-    // 2. Додавання нової книги
+    // Додавання нової книги
     books.push({ title: "The Great Gatsby", author: "F. Scott Fitzgerald", genre: "Fiction", pages: 180, isAvailable: true });
     console.log("2. Оновлений список книг після додавання 'The Great Gatsby':", books);
 
-    // 3. Видалення книги за назвою
+    // Видалення книги за назвою
     books = books.filter(book => book.title !== "Moby-Dick");
     console.log("3. Оновлений список книг після видалення 'Moby-Dick':", books);
 
-    // 4. Пошук книг за автором
+    // Пошук книг за автором
     let booksByAuthor = books.filter(book => book.author === "George Orwell");
     console.log("4. Книги автора 'George Orwell':", booksByAuthor);
 
-    // 5. Тогл доступності книги
+    // Тогл доступності книги
     const bookToToggle = books.find(book => book.title === "1984");
     if (bookToToggle) {
         bookToToggle.isAvailable = !bookToToggle.isAvailable; // Зміна статусу доступності
         console.log("5. Оновлений статус доступності книги '1984':", bookToToggle);
     }
 
-    // 6. Сортування книг за кількістю сторінок
+    // Сортування книг за кількістю сторінок
     books.sort((a, b) => a.pages - b.pages);
     console.log("6. Відсортовані книги за кількістю сторінок:", books);
 
-    // 7. Статистика бібліотеки
+    // Статистика бібліотеки
     const totalBooks = books.length;
     const availableBooks = books.filter(book => book.isAvailable).length;
     const borrowedBooks = totalBooks - availableBooks;
@@ -183,7 +183,7 @@ function libraryManagement() {
     console.log(`Кількість взятих книг: ${borrowedBooks}`);
     console.log(`Середня кількість сторінок: ${averagePages}`);
 
-    // 8. Отримання всіх книг
+    // Отримання всіх книг
     console.log("8. Список усіх книг в бібліотеці:", books);
 }
 
