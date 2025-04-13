@@ -132,7 +132,7 @@ section {
 /* === Toast-повідомлення === */
 #toast {
     position: fixed;
-    bottom: 1rem;
+    top: 1rem;
     right: 1rem;
     background-color: #323232;
     color: white;

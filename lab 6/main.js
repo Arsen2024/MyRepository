@@ -2,6 +2,7 @@
 let products = [];
 let filterCategory = null;
 let sortKey = null;
+let imageData = ""; // тимчасово зберігатиме закодоване зображення
 const productList = document.getElementById("product-list");
 const totalPriceEl = document.getElementById("total-price");
 const emptyMessage = document.getElementById("empty-message");
@@ -51,34 +52,38 @@ document.getElementById("reset-sorting").onclick = () => {
 form.onsubmit = (e) => {
     e.preventDefault();
     const id = idInput.value || generateId();
-    const newProduct = {
+    const product = {
         id,
         name: nameInput.value.trim(),
         price: parseFloat(priceInput.value),
         category: categoryInput.value.trim(),
-        image: imageInput.value.trim(),
+        image: imageData || findProduct(id)?.image || "", // беремо нове або старе
         created: idInput.value ? findProduct(id).created : Date.now(),
         updated: Date.now()
     };
+
     if (idInput.value) {
-        updateProduct(newProduct);
+        updateProduct(product);
     } else {
-        products.push(newProduct);
-        showToast(`Товар "${newProduct.name}" додано.`);
+        products.push(product);
+        showToast(`Товар "${product.name}" додано.`);
     }
 
+    imageData = ""; // очищуємо після збереження
     closeModal();
     renderProducts();
 };
 
 
-// Обробка завантаження зображення
+// Обробник завантаження зображення
+imageInput.addEventListener("change", handleImageUpload);
+
 function handleImageUpload(event) {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
-        reader.onloadend = function () {
-            imageData = reader.result; // записуємо результат (Data URL)
+        reader.onloadend = () => {
+            imageData = reader.result; // Data URL
         };
         reader.readAsDataURL(file);
     }
@@ -109,7 +114,7 @@ const openModal = (product = null) => {
     nameInput.value = product?.name || "";
     priceInput.value = product?.price || "";
     categoryInput.value = product?.category || "";
-    imageInput.value = product?.image || "";
+    imageData = product?.image || "";
     modalTitle.textContent = product ? "Редагувати товар" : "Новий товар";
 };
 
