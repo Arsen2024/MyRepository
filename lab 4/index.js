@@ -1,5 +1,4 @@
 // Завдання 1
-console.log("1 Task:");
 function processFruitsArray() {
     let fruits = ["яблуко", "банан", "апельсин", "виноград", "манго"];
 
@@ -24,7 +23,6 @@ function processFruitsArray() {
 processFruitsArray();
 
 // Завдання 2
-console.log("2 Task:");
 function processColorsArray() {
     let colors = ["червоний", "синій", "зелений", "жовтий", "темно-синій", "блакитний"];
 
@@ -47,7 +45,6 @@ function processColorsArray() {
 processColorsArray();
 
 // Завдання 3
-console.log("3 Task:");
 function processEmployeesArray() {
     let employees = [
         { імя: "Іван", вік: 25, посада: "розробник" },
@@ -77,7 +74,6 @@ function processEmployeesArray() {
 processEmployeesArray();
 
 // Завдання 4
-console.log("4 Task:");
 function processStudentsArray() {
     let students = [
         { імя: "Олексій", вік: 22, курс: 3 },
@@ -107,7 +103,6 @@ function processStudentsArray() {
 processStudentsArray();
 
 // Завдання 5
-console.log("5 Task:");
 function processNumbersArray() {
     let numbers = [2, 5, 8, 10, 15];
 
@@ -137,7 +132,6 @@ function processNumbersArray() {
 processNumbersArray();
 
 // Завдання 6
-console.log("6 Task:");
 function libraryManagement() {
     let books = [
         { title: "1984", author: "George Orwell", genre: "Dystopian", pages: 328, isAvailable: true },
@@ -145,53 +139,75 @@ function libraryManagement() {
         { title: "Moby-Dick", author: "Herman Melville", genre: "Adventure", pages: 635, isAvailable: false }
     ];
 
-    // Початковий масив книг
-    console.log("1. Початкові книги:", books);
-
-    // Додавання нової книги
-    books.push({ title: "The Great Gatsby", author: "F. Scott Fitzgerald", genre: "Fiction", pages: 180, isAvailable: true });
-    console.log("2. Оновлений список книг після додавання 'The Great Gatsby':", books);
-
-    // Видалення книги за назвою
-    books = books.filter(book => book.title !== "Moby-Dick");
-    console.log("3. Оновлений список книг після видалення 'Moby-Dick':", books);
-
-    // Пошук книг за автором
-    let booksByAuthor = books.filter(book => book.author === "George Orwell");
-    console.log("4. Книги автора 'George Orwell':", booksByAuthor);
-
-    // Тогл доступності книги
-    const bookToToggle = books.find(book => book.title === "1984");
-    if (bookToToggle) {
-        bookToToggle.isAvailable = !bookToToggle.isAvailable; // Зміна статусу доступності
-        console.log("5. Оновлений статус доступності книги '1984':", bookToToggle);
+    function addBook(title, author, genre, pages) {
+        books.push({ title, author, genre, pages, isAvailable: true });
+        console.log(`Книга "${title}" додана до бібліотеки.`);
+        getBooks();
     }
 
-    // Сортування книг за кількістю сторінок
-    books.sort((a, b) => a.pages - b.pages);
-    console.log("6. Відсортовані книги за кількістю сторінок:", books);
+    function removeBook(title) {
+        books = books.filter(book => book.title !== title);
+        console.log(`Книга "${title}" видалена з бібліотеки.`);
+        getBooks();
+    }
 
-    // Статистика бібліотеки
-    const totalBooks = books.length;
-    const availableBooks = books.filter(book => book.isAvailable).length;
-    const borrowedBooks = totalBooks - availableBooks;
-    const averagePages = totalBooks ? books.reduce((sum, book) => sum + book.pages, 0) / totalBooks : 0;
+    function findBooksByAuthor(author) {
+        const foundBooks = books.filter(book => book.author === author);
+        console.log(`Знайдено ${foundBooks.length} книг(и) автора "${author}":`, foundBooks);
+        return foundBooks;
+    }
 
-    console.log("7. Статистика бібліотеки:");
-    console.log(`Загальна кількість книг: ${totalBooks}`);
-    console.log(`Кількість доступних книг: ${availableBooks}`);
-    console.log(`Кількість взятих книг: ${borrowedBooks}`);
-    console.log(`Середня кількість сторінок: ${averagePages}`);
+    function toggleBookAvailability(title, isBorrowed) {
+        const book = books.find(book => book.title === title);
+        if (book) {
+            book.isAvailable = !isBorrowed;
+            console.log(`Книга "${title}" тепер ${book.isAvailable ? 'доступна' : 'взята'}.`);
+            getBooks();
+        } else {
+            console.log(`Книга "${title}" не знайдена.`);
+        }
+    }
 
-    // Отримання всіх книг
-    console.log("8. Список усіх книг в бібліотеці:", books);
+    function sortBooksByPages() {
+        books.sort((a, b) => a.pages - b.pages);
+        console.log("Книги відсортовано за кількістю сторінок.");
+        getBooks();
+    }
+
+    function getBooksStatistics() {
+        const totalBooks = books.length;
+        const availableBooks = books.filter(book => book.isAvailable).length;
+        const borrowedBooks = totalBooks - availableBooks;
+        const averagePages = totalBooks ? books.reduce((sum, book) => sum + book.pages, 0) / totalBooks : 0;
+        const stats = { totalBooks, availableBooks, borrowedBooks, averagePages };
+        console.log("Статистика книг:", stats);
+        return stats;
+    }
+
+    function getBooks() {
+        console.log("Список книг у бібліотеці:", books);
+        return books;
+    }
+
+    // Виконання всіх операцій для перевірки
+    console.log("Початковий список книг:");
+    getBooks();
+
+    addBook("The Great Gatsby", "F. Scott Fitzgerald", "Classic", 180);
+    removeBook("1984");
+    findBooksByAuthor("Harper Lee");
+    toggleBookAvailability("Moby-Dick", true);
+    sortBooksByPages();
+    getBooksStatistics();
 }
 
-// Викликаємо функцію
+// Викликаємо функцію для виконання
 libraryManagement();
 
+
+
+
 // Завдання 7
-console.log("7 Task:");
 function updateStudent() {
     // Створюємо об'єкт зі студентом
     let student = {
@@ -199,7 +215,7 @@ function updateStudent() {
         age: 20,
         course: 3
     };
-    console.log(student);
+
     // Додаємо нову властивість зі списком предметів
     student.subjects = ["Математика", "Інформатика", "Фізика"];
 
