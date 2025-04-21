@@ -1,0 +1,10 @@
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\bin\Debug\lab 8.2 C#.exe.config
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\bin\Debug\lab 8.2 C#.exe
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\bin\Debug\lab 8.2 C#.pdb
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab 8.2 C#.csproj.AssemblyReference.cache
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab_8._2_C_.Form1.resources
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab_8._2_C_.Properties.Resources.resources
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab 8.2 C#.csproj.GenerateResource.cache
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab 8.2 C#.csproj.CoreCompileInputs.cache
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab 8.2 C#.exe
+C:\Users\Арсен\source\repos\lab 8.2 C#\lab 8.2 C#\obj\Debug\lab 8.2 C#.pdb
