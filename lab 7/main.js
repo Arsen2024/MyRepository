@@ -1,160 +1,190 @@
 'use strict';
 
-// Define constants for elements
-const gameMenu = document.querySelector('.game-menu');
-const gameScreen = document.querySelector('.game-screen');
-const winScreen = document.querySelector('.win-screen');
-const startGameButton = document.querySelector('.button-start-game');
-const restartButton = document.querySelector('.button-restart');
-const nextLevelButton = document.querySelector('.button-next-level');
-const scorePanel = document.querySelector('.score-panel__score_num');
-const levelPanel = document.querySelector('.score-panel__level');
-const message = document.querySelector('.message');
-const timePanelYou = document.querySelector('.time-panel__you');
-const timePanelGunman = document.querySelector('.time-panel__gunman');
-const gunman = document.querySelector('.gunman');
-const playersPanelYou = document.querySelector('.players-panel__you');
-const playersPanelGunman = document.querySelector('.players-panel__gunman');
+let level = 1,
+    // timeToDuel = Math.floor(Math.random() * 1000) + 100,
+    timeToDuel = 700,
+    readyToDuel = 'false',
+    time = 0,
+    score = 0,
+    gameMenu = document.querySelector('.game-menu'),
+    startButton = document.querySelector('.button-start-game'),
+    wrapper = document.querySelector('.wrapper'),
+    gamePanels = document.querySelector('.game-panels'),
+    timeGunman = document.querySelector('.time-panel__gunman'),
+    timeYou = document.querySelector('.time-panel__you'),
+    showLevel = document.querySelector('.score-panel__level'),
+    message = document.querySelector('.message'),
+    gameScreen = document.querySelector('.game-screen'),
+    gunman = document.querySelector('.gunman'),
+    restartButton = document.querySelector('.button-restart'),
+    nextButton = document.querySelector('.button-next-level'),
+    winScreen = document.querySelector('.win-screen'),
+    sfxDeath = new Audio('sfx/sfx_death.m4a'),
+    sfxFire = new Audio('sfx/sfx_fire.m4a'),
+    sfxIntro = new Audio('sfx/sfx_intro.m4a'),
+    sfxShot = new Audio('sfx/sfx_shot.m4a'),
+    sfxWait = new Audio('sfx/sfx_wait.m4a'),
+    sfxWin = new Audio('sfx/sfx_win.m4a');
 
-let score = 0;
-let level = 1;
-let gunmanTime = 0;
-let playerTime = 0;
-let gunmanReady = false;
-let gameRunning = false;
-let shootReady = false;
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', nextLevel);
+restartButton.addEventListener('click', restartGame)
 
-// Show the game menu and hide the game screen
+// Функція початку гри
 function startGame() {
     gameMenu.style.display = 'none';
+    gamePanels.style.display = 'block';
     gameScreen.style.display = 'block';
-    startGameButton.disabled = true;
+    wrapper.style.display = 'block';
+    timeGunman.innerHTML = (timeToDuel / 1000).toFixed(2);
+    timeYou.innerHTML = (0).toFixed(2);
+    score = +document.querySelector('.score-panel__score_num').innerHTML;
+    showLevel.innerHTML = 'level: ' + level;
+    gunman.classList.add('gunman-level-' + level);
+    gunman.addEventListener('transitionend', prepareForDuel);
+    setTimeout(function () {
+        moveGunman();
+    }, 500);
+}
+
+// Функція перезапуску гри
+function restartGame() {
+    sfxDeath.pause();
     restartButton.style.display = 'none';
-    nextLevelButton.style.display = 'none';
-
-    score = 0;
-    level = 1;
-    gunmanTime = 0;
-    playerTime = 0;
-    updateScore();
-    updateLevel();
-    gameRunning = true;
-
-    startDuel();
+    message.innerHTML = '';
+    gameScreen.classList.remove('game-screen--death');
+    message.classList.remove('message--dead');
+    message.classList.remove('animated');
+    message.classList.remove('zoomIn');
+    gunman.classList.remove('gunman-level-' + level);
+    gunman.classList.remove('gunman-level-' + level + '__standing');
+    gunman.classList.remove('gunman-level-' + level + '__ready');
+    gunman.classList.remove('gunman-level-' + level + '__shooting');
+    setTimeout(function () {
+        startGame();
+    }, 1000);
 }
 
-// Update score and level
-function updateScore() {
-    scorePanel.textContent = score;
+// Функція яка запускає наступний рівень
+function nextLevel() {
+    if (level < 5) {
+        nextButton.style.display = 'none';
+        message.innerHTML = '';
+        message.classList.remove('message--win');
+        message.classList.remove('animated');
+        message.classList.remove('zoomIn');
+        gunman.classList.remove('gunman-level-' + level);
+        gunman.classList.remove('gunman-level-' + level + '__standing');
+        gunman.classList.remove('gunman-level-' + level + '__death');
+        level++;
+        timeToDuel = 700;
+        timeToDuel = timeToDuel - (level * 100);
+        startGame();
+    } else {
+        // level = Math.floor(Math.random() * 4) + 1;
+        message.style.display = 'none';
+        gameScreen.style.display = 'none';
+        gamePanels.style.display = 'none';
+        winScreen.style.display = 'block';
+    }
 }
 
-function updateLevel() {
-    levelPanel.textContent = `Level ${level}`;
+// Функція яка відповідає за рух Gunman'а
+function moveGunman() {
+    setTimeout(function () {
+        gunman.classList.add('moving');
+        sfxIntro.play();
+        sfxIntro.loop = true;
+    }, 50);
 }
 
-// Start the duel by setting gunman ready
-function startDuel() {
-    gunman.style.transition = 'none'; // reset transition
-    gunman.classList.remove('shooting');
-    gunman.classList.add('ready');
-    gunmanReady = true;
-    timePanelGunman.textContent = '0.00';
-    timePanelYou.textContent = '0.00';
+// Функція яка відповідає за дії які передують початку дуелі
+function prepareForDuel() {
+    sfxIntro.pause();
+    sfxWait.play();
+    sfxWait.currentTime = 0;
+    sfxWait.loop = true;
+    gunman.classList.remove('moving');
+    gunman.classList.add('standing');
+    gunman.classList.add('gunman-level-' + level + '__standing');
+    setTimeout(function () {
+        sfxWait.pause();
+        gunman.classList.add('gunman-level-' + level + '__ready');
+        message.classList.add('message--fire');
+        sfxFire.play();
+        gunman.addEventListener('mousedown', playerShootsGunman);
+        readyToDuel = true;
+        timeCounter(new Date().getTime());
+        setTimeout(gunmanShootsPlayer, timeToDuel);
+    }, 1000);
+}
 
-    setTimeout(() => {
-        if (gameRunning) {
-            shootReady = true;
-            gunmanReady = false;
-            gunman.classList.remove('ready');
-            gunman.classList.add('shooting');
-            gunmanTime = (Math.random() * 2 + 1).toFixed(2); // Gunman delay (between 1.00 and 3.00)
-            timePanelGunman.textContent = gunmanTime;
-            startGunmanShoot();
+// Функція для обрахування часу
+function timeCounter(t) {
+    let currTime;
+    (function timeCompare() {
+        currTime = new Date().getTime();
+        if (readyToDuel) {
+            time = ((currTime - t + 10) / 1000).toFixed(2);
+            timeYou.innerHTML = time;
+            setTimeout(timeCompare, 10);
         }
-    }, Math.random() * 3000 + 2000); // Random delay for gunman to shoot (2-5 sec)
+    })();
 }
 
-// Start gunman shoot countdown
-function startGunmanShoot() {
-    let countDown = gunmanTime * 1000;
-    const interval = setInterval(() => {
-        countDown -= 100;
-        const seconds = (countDown / 1000).toFixed(2);
-        timePanelGunman.textContent = seconds;
-        if (countDown <= 0) {
-            clearInterval(interval);
-            gunmanShootsPlayer();
-        }
-    }, 100);
-}
-
-// The gunman shoots
+// Функція яка відповідає за ситуацію коли gunman стріляє в гравця
 function gunmanShootsPlayer() {
-    if (gameRunning) {
-        message.textContent = 'You lost!';
-        setTimeout(() => {
-            endGame();
+    if (readyToDuel) {
+        readyToDuel = false;
+        gunman.classList.remove('standing');
+        gunman.classList.add('gunman-level-' + level + '__shooting');
+        setTimeout(function () {
+            sfxShot.play();
+            message.classList.remove('message--fire');
+            gameScreen.classList.add('game-screen--death');
+            message.classList.add('message--dead');
+            message.classList.add('animated');
+            message.classList.add('zoomIn');
+            message.innerHTML = 'You are dead!';
+        }, timeToDuel / 3);
+        gunman.removeEventListener('mousedown', playerShootsGunman);
+        setTimeout(function () {
+            sfxDeath.play();
+            restartButton.style.display = 'block';
         }, 1000);
     }
 }
 
-// Player shoots
-function playerShootsGunman(event) {
-    if (!shootReady || !gameRunning) return;
-    shootReady = false;
-    playerTime = (event.timeStamp / 1000).toFixed(2);
-    timePanelYou.textContent = playerTime;
-
-    if (playerTime < gunmanTime) {
-        score++;
-        message.textContent = 'You won!';
-    } else {
-        message.textContent = 'You lost!';
+// Функція яка відповідає за ситуацію коли гравець стріляє в Gunman'а
+function playerShootsGunman() {
+    if (readyToDuel) {
+        readyToDuel = false;
+        sfxShot.play();
+        message.classList.remove('message--fire');
+        gunman.classList.remove('standing');
+        gunman.classList.remove('gunman-level-' + level + '__shooting');
+        gunman.classList.add('gunman-level-' + level + '__death');
+        gunman.removeEventListener('mousedown', playerShootsGunman);
+        sfxWin.play();
+        setTimeout(function () {
+            message.classList.add('message--win');
+            message.classList.add('animated');
+            message.classList.add('zoomIn');
+            message.innerHTML = 'You Win!';
+            scoreCount();
+            nextButton.style.display = 'block';
+        }, 1000);
     }
+}
 
-    setTimeout(() => {
-        if (score < 3) {
-            nextLevel();
-        } else {
-            endGame();
+// Функія яка обрахування кількості очок
+function scoreCount() {
+    let scoreDiv = document.querySelector('.score-panel__score_num');
+    let temp = +((+(timeToDuel / 1000) * 50 - +(+timeYou.innerHTML) * 100) * 100 * level).toFixed(0);
+    (function count() {
+        if (+scoreDiv.innerHTML - score < temp) {
+            scoreDiv.innerHTML = +scoreDiv.innerHTML + 100;
+            setTimeout(count, 10);
         }
-    }, 1000);
+    })();
 }
-
-// Go to the next level
-function nextLevel() {
-    level++;
-    updateLevel();
-    setTimeout(() => {
-        startDuel();
-    }, 1000);
-}
-
-// End the game (show win screen)
-function endGame() {
-    gameRunning = false;
-    message.textContent = '';
-    gameScreen.style.display = 'none';
-    winScreen.style.display = 'block';
-    nextLevelButton.style.display = 'none';
-    restartButton.style.display = 'block';
-}
-
-// Restart the game
-function restartGame() {
-    winScreen.style.display = 'none';
-    gameMenu.style.display = 'block';
-    startGameButton.disabled = false;
-}
-
-// Event listeners
-startGameButton.addEventListener('click', startGame);
-restartButton.addEventListener('click', restartGame);
-nextLevelButton.addEventListener('click', nextLevel);
-
-// Start player shoot on key press
-document.addEventListener('keydown', (event) => {
-    if (event.code === 'Space') {
-        playerShootsGunman(event);
-    }
-});
