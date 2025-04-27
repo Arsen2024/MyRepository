@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Pair Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Memory Pair Game</h1>
+<div id="settings">
+    <label>
+        Розмір поля:
+        <select id="gridSize">
+            <option value="4x4">4 x 4</option>
+            <option value="4x5">4 x 5</option>
+            <option value="6x6">6 x 6</option>
+        </select>
+    </label>
+
+    <label>
+        Складність:
+        <select id="difficulty">
+            <option value="easy">Легко (3 хв)</option>
+            <option value="normal">Нормально (2 хв)</option>
+            <option value="hard">Складно (1 хв)</option>
+        </select>
+    </label>
+
+    <button id="startBtn">Розпочати гру</button>
+    <button id="resetSettingsBtn">Скинути налаштування</button>
+</div>
+
+<div id="info">
+    <span id="timer">00:00</span>
+    <span id="moves">Ходи: 0</span>
+</div>
+
+<div id="game"></div>
+
+<script src="index.js"></script>
+</body>
+</html>

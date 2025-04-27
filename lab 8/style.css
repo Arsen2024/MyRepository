@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f7f7f7;
+    padding: 20px;
+}
+
+#settings {
+    margin-bottom: 20px;
+}
+
+#info {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#game {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #2980b9;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.card.flipped img,
+.card.matched img {
+    display: block;
+}
+
+.card.flipped,
+.card.matched {
+    background-color: transparent;
+    cursor: default;
+}
