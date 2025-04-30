@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\lab 9.5\lab 9.5\bin\Debug\lab 9.5.exe.config
+C:\Users\User\source\repos\lab 9.5\lab 9.5\bin\Debug\lab 9.5.exe
+C:\Users\User\source\repos\lab 9.5\lab 9.5\bin\Debug\lab 9.5.pdb
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab 9.5.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab_9._5.Form1.resources
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab_9._5.Properties.Resources.resources
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab 9.5.csproj.GenerateResource.cache
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab 9.5.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab 9.5.exe
+C:\Users\User\source\repos\lab 9.5\lab 9.5\obj\Debug\lab 9.5.pdb
