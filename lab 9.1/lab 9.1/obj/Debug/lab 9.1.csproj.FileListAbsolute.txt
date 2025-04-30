@@ -1,0 +1,10 @@
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\bin\Debug\lab 9.1.exe.config
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\bin\Debug\lab 9.1.exe
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\bin\Debug\lab 9.1.pdb
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab 9.1.csproj.AssemblyReference.cache
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab_9._1.Form1.resources
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab_9._1.Properties.Resources.resources
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab 9.1.csproj.GenerateResource.cache
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab 9.1.csproj.CoreCompileInputs.cache
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab 9.1.exe
+C:\Users\Arsen\source\repos\lab 9.1\lab 9.1\obj\Debug\lab 9.1.pdb
