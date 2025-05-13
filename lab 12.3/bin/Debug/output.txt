@@ -1,0 +1,27 @@
+Currency: 1
+79.99 usd → 79.99
+
+Dimension: 3
+58 kilograms → 58
+120 cm → 120
+3.5 kg → 3.5
+
+Temperature: 1
+21°c → 21
+
+DateTime: 2
+by october 25th, 2025 → невідомо
+before 3:30 pm today → невідомо
+
+IPAddress: 1
+192.168.0.1 → 192.168.0.1
+
+Email: 1
+john.doe@example.com → john.doe@example.com
+
+URL: 1
+https://www.example.com → https://www.example.com
+
+Hashtag: 1
+#tech2025 → #tech2025
+

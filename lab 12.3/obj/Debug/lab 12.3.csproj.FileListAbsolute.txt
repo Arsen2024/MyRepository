@@ -1,0 +1,48 @@
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\lab 12.3.exe.config
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\lab 12.3.exe
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\lab 12.3.pdb
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Definitions.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.DateTime.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.Number.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.NumberWithUnit.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.Sequence.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Buffers.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Memory.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.ValueTuple.dll
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Definitions.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.DataTypes.TimexExpression.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.DateTime.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.Number.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.NumberWithUnit.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\Microsoft.Recognizers.Text.Sequence.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Buffers.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Memory.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\bin\Debug\System.ValueTuple.xml
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab 12.3.csproj.AssemblyReference.cache
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab_12._3.Form1.resources
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab_12._3.Properties.Resources.resources
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab 12.3.csproj.GenerateResource.cache
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab 12.3.csproj.CoreCompileInputs.cache
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab 12.3.csproj.Up2Date
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab 12.3.exe
+C:\Users\Arsen\source\repos\lab 12.3\lab 12.3\obj\Debug\lab 12.3.pdb
