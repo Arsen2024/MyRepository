@@ -1,0 +1,20 @@
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\bin\Debug\net8.0-windows\lab 13.3.exe
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\bin\Debug\net8.0-windows\lab 13.3.deps.json
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\bin\Debug\net8.0-windows\lab 13.3.runtimeconfig.json
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\bin\Debug\net8.0-windows\lab 13.3.dll
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\bin\Debug\net8.0-windows\lab 13.3.pdb
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3_MarkupCompile.cache
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3_MarkupCompile.lref
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.g.resources
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.AssemblyInfoInputs.cache
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.AssemblyInfo.cs
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.csproj.CoreCompileInputs.cache
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.dll
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\refint\lab 13.3.dll
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.pdb
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\lab 13.3.genruntimeconfig.cache
+C:\Users\Arsen\source\repos\lab 13.3\lab 13.3\obj\Debug\net8.0-windows\ref\lab 13.3.dll
